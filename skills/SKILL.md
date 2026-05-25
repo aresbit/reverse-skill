@@ -22,6 +22,9 @@
 | **渗透测试工具链** | `pentest-tools/` | Nmap/Nuclei/SQLMap/FFUF/Hashcat 等 20+ 渗透工具，通过 MCP 暴露给 AI |
 | **图表生成** | `diagram-generator/` | 从自然语言生成 Mermaid/Graphviz/PlantUML 图表（攻击路径图、数据流图、架构图、状态机） |
 | **攻击链编排** | `attack-chain/` | 多阶段攻击路径规划与执行的总指挥；完整渗透、HW 演练、从外网打到域控等跨阶段任务从这里开始 |
+| **LLM/AI 安全测试** | `llm-security/` | OWASP LLM + ASI Top 10：Prompt 注入、工具滥用、记忆投毒、Agent 劫持、系统提示词提取 |
+| **API 安全测试** | `api-security/` | REST/GraphQL/WebSocket 全协议：BOLA/IDOR、JWT/OAuth 攻击、10 阶段方法论 |
+| **供应链安全** | `supply-chain-security/` | SBOM/SCA/CI-CD 管道：依赖扫描、容器安全、构建完整性、漏洞可达性验证 |
 
 ## 统一入口
 
@@ -63,7 +66,7 @@
 powershell -NoProfile -ExecutionPolicy Bypass -File "<skill-root>\scripts\bootstrap-reverse.ps1" -Capability @('工具名') -StartServices
 ```
 
-支持的能力：jadx、apktool、frida、idalib-mcp、jshookmcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、nmap、proxycat、burpsuite-mcp、binwalk、unblob、emba、firmadyne、qemu-static、pwntools、ropgadget、one_gadget、bindiff、ghidriff、syswhispers3、pe-sieve
+支持的能力：jadx、apktool、frida、idalib-mcp、jshookmcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、nmap、proxycat、burpsuite-mcp、binwalk、unblob、emba、firmadyne、qemu-static、pwntools、ropgadget、one_gadget、bindiff、ghidriff、syswhispers3、pe-sieve、garak、pyrit、osv-scanner、trivy、syft、gitleaks
 
 自举完成后会自动刷新 `tool-index`。
 

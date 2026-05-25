@@ -26,6 +26,9 @@
 | Prompt 注入 / Agent | `../CTF-Sandbox-Orchestrator/competition-prompt-injection/SKILL.md` | — |
 | 移动端 (Android/iOS) | `../CTF-Sandbox-Orchestrator/competition-android-hooking/SKILL.md` | — |
 | 固件 / 恶意样本 | `../CTF-Sandbox-Orchestrator/competition-firmware-layout/SKILL.md` | — |
+| **LLM 应用 / AI Agent** | `llm-security/SKILL.md` — OWASP LLM + ASI Top 10 | `../CTF-Sandbox-Orchestrator/competition-prompt-injection/SKILL.md` — CTF 场景 |
+| **REST / GraphQL / WebSocket API** | `api-security/SKILL.md` — 10 阶段方法论 | `pentest-tools/SKILL.md` — 基础 Web 渗透 |
+| **软件供应链 / SBOM / SCA** | `supply-chain-security/SKILL.md` — 六层治理框架 | `pentest-tools/SKILL.md` — 依赖扫描工具 |
 
 ## 按用户意图
 
@@ -141,6 +144,18 @@
 | "objdump/反汇编/ELF 分析" | `reverse-engineering/SKILL.md` — 静态分析 |
 | "strings/字符串提取" | `reverse-engineering/SKILL.md` — 快速侦察 |
 | "ProxyCat/代理池/IP 轮换" | `pentest-tools/SKILL.md` — 代理管理 |
+| "LLM 安全/AI 安全测试/Prompt 注入测试" | `llm-security/SKILL.md` — OWASP LLM + ASI Top 10 完整框架 |
+| "LLM 越狱/jailbreak/系统提示词提取" | `llm-security/references/prompt-injection-methodology.md` — 五级递进注入 |
+| "Agent 安全/工具滥用/记忆投毒/目标劫持" | `llm-security/references/agent-security-testing.md` — 七阶段 Agent 测试 |
+| "garak/PyRIT/AI 红队" | `llm-security/SKILL.md` — LLM 安全工具链 |
+| "API 安全测试/接口渗透" | `api-security/SKILL.md` — 10 阶段 API 测试方法论 |
+| "GraphQL 安全/内省攻击/批查询绕过" | `api-security/references/rest-graphql-testing.md` — GraphQL 专项 |
+| "JWT 攻击/OAuth 绕过/alg:none" | `api-security/references/jwt-oauth-testing.md` — JWT + OAuth 测试 |
+| "BOLA/IDOR/BFLA/对象级授权绕过" | `api-security/SKILL.md` — Phase 3 授权测试 |
+| "供应链安全/SBOM/SCA/依赖扫描" | `supply-chain-security/SKILL.md` — 六层供应链治理 |
+| "CI/CD 安全/管道审计/构建完整性" | `supply-chain-security/references/cicd-pipeline-security.md` — 管道安全 |
+| "容器安全/镜像扫描/Trivy/Cosign" | `supply-chain-security/SKILL.md` — 容器安全章节 |
+| "gitleaks/密钥扫描/凭证泄漏" | `supply-chain-security/SKILL.md` — CI/CD 管道安全 |
 
 ## 按工具链
 
@@ -195,6 +210,14 @@
 | Rubber Ducky / WiFi Pineapple / Proxmark3 | `attack-chain/` — 近源渗透硬件 |
 | pentestMCP (Docker) | `pentest-tools/` — 20+ 工具一键 MCP |
 | Mermaid / Graphviz / PlantUML | `diagram-generator/` — 图表生成（流程图/时序图/架构图/攻击路径） |
+| garak / PyRIT / promptfoo | `llm-security/` — LLM 安全测试（100+ 注入探针/多轮编排） |
+| Vespasian / Entropy / api.sh | `api-security/` — API 发现与攻击场景生成 |
+| jwt_tool | `api-security/` — JWT 全面测试（alg:none/密钥混淆/kid 注入） |
+| FireTail / Escape DAST | `api-security/` — GraphQL 专项 + 业务逻辑安全 |
+| OSV-Scanner / Trivy / Syft | `supply-chain-security/` — SBOM 生成 + SCA 扫描 |
+| OWASP Dependency-Track | `supply-chain-security/` — 企业级持续 SCA 监控 |
+| Gitleaks / truffleHog | `supply-chain-security/` — 密钥/凭证扫描 |
+| Cosign / SLSA | `supply-chain-security/` — 构建签名与溯源 |
 
 需要确认本机工具是否可用、路径在哪里、哪个脚本会调用它时，统一查看 `tool-index.md`，不要临时猜路径。
 

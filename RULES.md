@@ -96,6 +96,15 @@
 - Cobalt Strike、Sliver、Havoc、Mythic、C2 框架
 - 脱敏、占位符、anonymization、{target_ip}、{username}、写 writeup、分享 payload
 - msfconsole 挂死、MSF 卡住、孤儿进程、orphan ruby、MSF 调用规范
+- LLM 安全、AI 安全测试、Prompt 注入、间接注入、jailbreak、越狱、系统提示词提取、模型安全
+- LLM Top 10、OWASP LLM、ASI Top 10、Agentic AI、Agent 安全、工具滥用、记忆投毒、目标劫持、Agent 劫持
+- garak、PyRIT、promptfoo、AgentThreatBench、AI 红队、LLM 红队、模型红队
+- API 安全测试、接口渗透、GraphQL 安全、内省攻击、REST API 审计
+- BOLA、IDOR、BFLA、对象级授权、功能级授权、JWT 攻击、alg:none、密钥混淆、OAuth 绕过
+- rate limit bypass、限速绕过、API 限速、WebSocket 安全
+- 供应链安全、SBOM、软件组成分析、SCA、依赖扫描、依赖漏洞、供应链攻击
+- CI/CD 安全、管道审计、构建完整性、容器安全、镜像扫描、容器签名
+- Trivy、Syft、Cosign、Gitleaks、OSV-Scanner、Dependency-Track、SLSA
 
 ---
 
@@ -348,7 +357,7 @@
 powershell -NoProfile -ExecutionPolicy Bypass -File "<本包根目录>/skills/scripts/bootstrap-reverse.ps1" -Capability @('工具名') -StartServices
 ```
 
-支持的能力名：jadx、apktool、frida、idalib-mcp、jshookmcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、nmap、proxycat、burpsuite-mcp、binwalk、unblob、emba、firmadyne、qemu-static、pwntools、ropgadget、one_gadget、bindiff、ghidriff、syswhispers3、pe-sieve
+支持的能力名：jadx、apktool、frida、idalib-mcp、jshookmcp、anything-analyzer、idapro、r2、rabin2、adb、agent-browser、ghidra-mcp、nmap、proxycat、burpsuite-mcp、binwalk、unblob、emba、firmadyne、qemu-static、pwntools、ropgadget、one_gadget、bindiff、ghidriff、syswhispers3、pe-sieve、garak、pyrit、osv-scanner、trivy、syft、gitleaks
 
 ## 刷新工具索引
 
