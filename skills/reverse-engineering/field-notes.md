@@ -87,7 +87,7 @@ Detailed quick notes that support [`SKILL.md`](SKILL.md). Read this file after t
 - [Web/CTF Auth Bypass Case Notes](#webctf-auth-bypass-case-notes)
   - [Signed Cookie Key Reuse: access token to admin_session](#signed-cookie-key-reuse-access-token-to-admin_session)
 - [Web Phishing Infrastructure](#web-phishing-infrastructure)
-  - [Phishing Panel: asui8.com.cn / k2m9x.com.cn](#phishing-panel-asui8comcn--k2m9xcomcn)
+  - [Phishing Panel: {domain_a} / {domain_b}](#phishing-panel-domain_a--domain_b)
 
 ## Binary Types
 
@@ -407,16 +407,16 @@ print(f"admin_session={payload_b64}.{sig_b64}")
 
 ## Web Phishing Infrastructure
 
-### Phishing Panel: asui8.com.cn / k2m9x.com.cn
-**完整分析**: [phishing-asui8-case-study.md](phishing-asui8-case-study.md)
+### Phishing Panel: {target_domain_a} / {target_domain_b}
+**完整分析**: [phishing-case-study.md](phishing-case-study.md)
 
-Two-server Chinese phishing infrastructure impersonating China's Ministry of Finance ("2026年个人财政补贴申领"). Full victim control system with server-driven status code redirection.
+Two-server phishing infrastructure impersonating a government agency. Full victim control system with server-driven status code redirection.
 
 **Architecture:**
-- `k2m9x.com.cn` — Presentation layer (phishing pages, JS polling client)
-- `asui8.com.cn` — Data layer (PHP+MySQL backend, admin panel)
-- Both behind NAT (172.18.0.2 internal), nginx, SSL-only
-- Web root: `/www/wwwroot/asui8.com.cn/`
+- `{target_domain_a}` — Presentation layer (phishing pages, JS polling client)
+- `{target_domain_b}` — Data layer (PHP+MySQL backend, admin panel)
+- Both behind NAT ({internal_ip} internal), nginx, SSL-only
+- Web root: `/www/wwwroot/{target_domain_b}/`
 
 **Victim Flow:** Landing page (fake subsidy quotas) → 1.html (ID/bank card form → `submit.php`) → 4.html (PIN → `get-ayment.php`) → server-controlled staged pages (9-16) via 1-second `status_check.php` polling.
 
@@ -432,8 +432,8 @@ Two-server Chinese phishing infrastructure impersonating China's Ministry of Fin
 **Infrastructure:**
 | Domain | Public IP | Role |
 |--------|-----------|------|
-| asui8.com.cn | 154.36.188.112 | Backend + Admin |
-| k2m9x.com.cn | 154.36.188.16 | Frontend (phishing pages) |
+| {target_domain_1} | {target_ip_1} | Backend + Admin |
+| {target_domain_2} | {target_ip_2} | Frontend (phishing pages) |
 
 
 

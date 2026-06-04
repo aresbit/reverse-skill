@@ -50,5 +50,8 @@ burp-mcp-full/lib/
 *.jar
 !burp-mcp-full/build/libs/burp-mcp-full.jar
 
-skills/tool-index.md
+# 已弃用的文件（保留用于历史参考）
 BOOTSTRAP.md
+
+# 生成的报告目录（避免未脱敏内容泄漏）
+reports/

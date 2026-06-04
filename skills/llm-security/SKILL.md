@@ -85,7 +85,7 @@ LLM 输出可能被下游系统直接消费：
 |------|------|
 | 浏览器/DOM | XSS via `<img src=x onerror=...>` 在生成内容中 |
 | 数据库 | SQL 注入在生成的查询中 |
-| Shell/OS | 命令注入 (`cat file; rm -rf /`) |
+| Shell/OS | 命令注入 (`cat file; cat /etc/hosts`) |
 | API 调用 | SSRF、越权请求 |
 
 ### 6. 系统提示词提取（OWASP LLM07）
